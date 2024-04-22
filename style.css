@@ -45,4 +45,21 @@ main {
 
 .display {
     max-height: 80px;
+    text-align: right;
+    font-style: italic;
+}
+
+.keypad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.key {
+    min-width: 25%;
+    min-height: 20%;
+    font-size: 32px;
+    font-weight: 00;
 }
