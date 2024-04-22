@@ -1,0 +1,48 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #102030;
+    color: silver;
+}
+
+header, footer {
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #203040;
+    padding: 10px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 300px;
+    border: 2px solid;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 5px 7px;
+    gap: 5px;
+}
+
+.display, .keypad, .key {
+    border: 2px solid;
+    border-radius: 10px;
+    min-height: 80px;
+    flex-grow: 1;
+}
+
+.display {
+    max-height: 80px;
+}
