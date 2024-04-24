@@ -10,10 +10,10 @@ function drawKeys() {
     ];
     const bindings = [
         clearDisplay, printKey, printKey, printKey,
-        showNum, showNum, showNum,  printKey,,
-        showNum, showNum, showNum,  printKey,,
-        showNum, showNum, showNum,  printKey,,
-        printKey,, showNum,  printKey,  printKey
+        showNum, showNum, showNum,  printKey,
+        showNum, showNum, showNum,  printKey,
+        showNum, showNum, showNum,  printKey,
+        printKey, showNum,  printKey,  printKey
     ];
     for (let i = 0; i < keys.length; i++) {
         const button = document.createElement('button');
