@@ -1,19 +1,28 @@
-// Elements:
+// DOM Elements:
 const display = document.querySelector('.display');
 const keypad = document.querySelector('.keypad');
 
+// Global Variables:
+const operators = {
+    '+': add,
+    '-': substract,
+    'x': multiply,
+    '/': divide,
+};
+const operands = [];
+let currentOperator = '';
 
-// Function declarations:
+// Function Declarations:
 function drawKeys() {
     const keys = [
-        'C', '%', '√', '⌫', 1, 2, 3, '+', 4, 5, 6, '-', 7, 8, 9, 'x', '.', 0, '=', '/'
+        'C', '%', '√', '⌫',1, 2, 3, '+', 4, 5, 6, '-', 7, 8, 9, 'x', '.', 0, '=', '/'
     ];
     const bindings = [
         clearDisplay, printKey, printKey, printKey,
-        showNum, showNum, showNum,  printKey,
-        showNum, showNum, showNum,  printKey,
-        showNum, showNum, showNum,  printKey,
-        printKey, showNum,  printKey,  printKey
+        operate, operate, operate,  handleOperator,
+        operate, operate, operate,  handleOperator,
+        operate, operate, operate,  handleOperator,
+        printKey, operate,  displayResult,  handleOperator
     ];
     for (let i = 0; i < keys.length; i++) {
         const button = document.createElement('button');
@@ -25,17 +34,6 @@ function drawKeys() {
     }
 }
 
-function printKey(event) {
-    const key = event.target.textContent;
-    display.textContent += key
-}
 
-function showNum(event) {
-    printKey(event);
-}
-
-function clearDisplay() {
-    display.textContent = "";
-}
-
+// Test-codes:
 drawKeys();
